@@ -1,0 +1,19 @@
+CREATE DATABASE IF NOT EXISTS SchoolApp
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
+
+USE SchoolApp;
+
+CREATE TABLE IF NOT EXISTS students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nis VARCHAR(30) NOT NULL UNIQUE,
+    name VARCHAR(100) NOT NULL,
+    class_name VARCHAR(50) NOT NULL,
+    address TEXT
+);
+
+CREATE TABLE IF NOT EXISTS visitors (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    visitors VARCHAR(100) NOT NULL,
+    institution VARCHAR(150) NOT NULL
+);
